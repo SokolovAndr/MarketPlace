@@ -19,6 +19,7 @@ from userProfile import views as viewsu
 from shoppingCart import views as viewss
 from mainIndex import views as viewsm
 from catalog import views as viewsc
+from api import views as viewsa
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
@@ -27,5 +28,6 @@ urlpatterns = [
     re_path(r'^profile?$', viewsu.profile),
     re_path(r'^profile/shopcart?$', viewss.shopCart),
     re_path(r'^$', viewsm.main),
-    re_path(r'^catalog?$', viewsc.catalog)
+    re_path(r'^catalog?$', viewsc.catalog),
+    re_path(r'^api/product?$', viewsa.requestProduct),
 ]
