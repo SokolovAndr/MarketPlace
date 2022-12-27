@@ -13,21 +13,30 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import re_path, path
-from product import views as viewsp
-from userProfile import views as viewsu
-from shoppingCart import views as viewss
-from mainIndex import views as viewsm
-from catalog import views as viewsc
-from api import views as viewsa
+from django.urls import re_path, path, include
+from product import views as viewsProduct
+from userProfile import views as viewsUser
+from shoppingCart import views as viewsShopCart
+from mainIndex import views as viewsMain
+from catalog import views as viewsCatalog
+from api import views as api
+
+apipatterns = [
+    re_path(r'product?$', api.requestProduct),
+    re_path(r'catalog?$', api.requestCatalog),
+    re_path(r'shopcart?$', api.requestShopCart),
+    re_path(r'profile?$', api.requestProfile),
+    re_path(r'register?$', api.requestAddProfile),
+    re_path(r'login?$', api.requestLogin)
+]
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path('catalog/product/<int:id>', viewsp.product),
-    path('catalog/product/<int:id>/', viewsp.product),
-    re_path(r'^profile?$', viewsu.profile),
-    re_path(r'^profile/shopcart?$', viewss.shopCart),
-    re_path(r'^$', viewsm.main),
-    re_path(r'^catalog?$', viewsc.catalog),
-    re_path(r'^api/product?$', viewsa.requestProduct),
+    path('catalog/product/<int:id>', viewsProduct.product),
+    path('catalog/product/<int:id>/', viewsProduct.product),
+    re_path(r'^profile?$', viewsUser.profile),
+    re_path(r'^profile/shopcart?$', viewsShopCart.shopCart),
+    re_path(r'^$', viewsMain.main),
+    re_path(r'^catalog?$', viewsCatalog.catalog),
+    path('api/', include(apipatterns)),
 ]
