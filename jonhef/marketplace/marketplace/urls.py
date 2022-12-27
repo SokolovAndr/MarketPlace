@@ -27,7 +27,10 @@ apipatterns = [
     re_path(r'shopcart?$', api.requestShopCart),
     re_path(r'profile?$', api.requestProfile),
     re_path(r'register?$', api.requestAddProfile),
-    re_path(r'login?$', api.requestLogin)
+    re_path(r'login?$', api.requestLogin),
+    re_path(r'buy?$', api.requestBuy),
+    re_path(r'orders?$', api.requestOrders),
+    re_path(r'orderbyid?$', api.requestOrderById),
 ]
 
 urlpatterns = [
