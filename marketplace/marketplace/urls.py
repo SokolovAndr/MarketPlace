@@ -42,4 +42,5 @@ urlpatterns = [
     re_path(r'^$', viewsMain.main),
     re_path(r'^catalog?$', viewsCatalog.catalog),
     path('api/', include(apipatterns)),
+    re_path(r'^', viewsMain.req404)
 ]
