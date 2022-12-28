@@ -82,6 +82,13 @@ DATABASES = {
         'PASSWORD' : password,
         'USER' : 'root',
         'NAME' : 'djangoadmin',
+    },
+    'marketplace': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'localhost',
+        'PASSWORD': password,
+        'USER': 'root',
+        'NAME': 'products',
     }
 }
 
