@@ -20,6 +20,9 @@ from shoppingCart import views as viewsShopCart
 from mainIndex import views as viewsMain
 from catalog import views as viewsCatalog
 from api import views as api
+from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 apipatterns = [
     re_path(r'product?$', api.requestProduct),
@@ -34,7 +37,8 @@ apipatterns = [
 ]
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
+    re_path(r'^login', viewsUser.login),
+    re_path(r'^admin', admin.site.urls),
     path('catalog/product/<int:id>', viewsProduct.product),
     path('catalog/product/<int:id>/', viewsProduct.product),
     re_path(r'^profile?$', viewsUser.profile),
@@ -43,4 +47,4 @@ urlpatterns = [
     re_path(r'^catalog?$', viewsCatalog.catalog),
     path('api/', include(apipatterns)),
     re_path(r'^', viewsMain.req404)
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

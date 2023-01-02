@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpRequest, HttpResponse, Http404, HttpResponse
+from django.http import HttpRequest, HttpResponse, Http404
 import json
 from django.db import connections
 import hashlib as hash
@@ -11,13 +11,26 @@ def requestProduct(request):
     if 'id' in request.headers:
         productObj = {}
         with connections['marketplace'].cursor() as cursor:
-            cursor.execute(f"SELECT * FROM products WHERE id={request.headers['id']};")
-            return HttpResponse(json.dumps(cursor.fetchone()))
+            cursor.execute(f"SELECT name, description, photolink, count, price, type, id, protein, carbohydrate, fat, calories, weight FROM products WHERE id={request.headers['id']};")
+            SQLResult = cursor.fetchone()
+            productObj['name'] = SQLResult[0]
+            productObj['description'] = SQLResult[1]
+            productObj['photolink'] = SQLResult[2]
+            productObj['count'] = SQLResult[3]
+            productObj['price'] = SQLResult[4]
+            productObj['type'] = SQLResult[5]
+            productObj['id'] = SQLResult[6]
+            productObj['protein'] = SQLResult[7]
+            productObj['carbohydrate'] = SQLResult[8]
+            productObj['fat'] = SQLResult[9]
+            productObj['calories'] = SQLResult[10]
+            productObj['weight'] = SQLResult[11]
+            return HttpResponse(json.dumps(productObj))
     else:
         productStr = json.loads(request.body)
         with connections['marketplace'].cursor() as cursor:
             cursor.execute(f"INSERT INTO products(name, description, photolink, count, price, type, protein, carbohydrate, fat, calories, weight, numberOfVisits) values('{productStr['name']}', '{productStr['description']}', '{productStr['photo']}', {productStr['count']}, {productStr['price']}, '{productStr['type']}', {productStr['protein']}, {productStr['carbohydrate']}, {productStr['fat']}, {productStr['calories']}, {productStr['weight']}, 0);")
-            return HttpResponse(json.dumps(cursor.fetchone()))
+            return HttpResponse(status=200)
 
 def requestCatalog(request):
     if request.method != 'POST':
@@ -54,6 +67,8 @@ def requestProfile(request):
         return HttpResponse(status=404)
     result = {}
     userToken = json.loads(request.body)['token']
+    if userToken == '':
+        userToken = request.COOKIES['token']
     with connections['marketplace'].cursor() as cursor:
         cursor.execute(f"SELECT fio FROM users WHERE token={userToken};")
         result['ФИО'] = cursor.fetchone()[0]
@@ -119,6 +134,8 @@ def requestOrders(request):
         return HttpResponse(status=404)
     result = []
     jsonReq = json.loads(request.body)
+    if jsonReq['token'] == '':
+        jsonReq['token'] = request.COOKIES['token']
     with connections['marketplace'].cursor() as cursor:
         cursor.execute(f"SELECT id FROM orders WHERE userId=(SELECT id FROM users WHERE token='{jsonReq['token']}');")
         SQLResult = cursor.fetchall()
