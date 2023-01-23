@@ -1,0 +1,113 @@
+/*---------------------------------------
+     Меню              
+  -----------------------------------------*/
+
+#menu {
+    padding-bottom: 0;
+}
+  
+#menu .container {
+    width: 90%;
+}
+  
+#menu .col-md-4 {
+    margin-bottom: 50px;
+    padding: 0;
+}
+  
+.menu-thumb img {
+    width: 90%;
+    transition: 1s;
+}
+  
+#menu .menu-thumb {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+}
+  
+.menu-thumb .menu-info {
+    position: absolute;
+    top: 75%;
+    bottom: 0px;
+    right: 58px;
+    /* Сделать адаптивным */
+    left: 0px;
+    text-align: left;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 15px 20px;
+    transition: 0.3s 0.2s;
+    background: rgba(0, 0, 0, 0.5);
+}
+  
+.menu-info .menu-item {
+    float: left;
+}
+  
+.menu-info .menu-price {
+    float: right;
+}
+  
+.menu-info .menu-price span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    display: block;
+    margin-top: 10px;
+}
+  
+.menu-thumb .menu-info h3, .menu-thumb .menu-info p, .menu-thumb .menu-info span {
+    /* transform: translateY(100%); */
+    opacity: 1;
+    display: block;
+    transition: 0.5s 0.2s;
+    color: #ffffff;
+    z-index: 2;
+    position: relative;
+}
+  
+.menu-thumb .menu-info h3 {
+    margin-top: 0;
+}
+  
+.menu-thumb .menu-info p {
+    color: #d9d9d9;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+  
+  /* .menu-thumb:hover .menu-info h3,
+    .menu-thumb:hover .menu-info p,
+    .menu-thumb:hover .menu-info span {
+      transform: translateY(0px);
+      opacity: 1;
+    } */
+  
+  /* .menu-thumb:hover .menu-info {
+      background: rgba(0,0,0,0.8);
+    } */
+  
+.custom-navbar .nav li a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #575757;
+    padding-right: 22px;
+    padding-left: 22px;
+    text-transform: uppercase;
+}
+  
+#menu .caption {
+    background-image: url(/img/menu/menu-background.jpg);
+}
+  
+.section-title h4 {
+    color: #575757;
+}
+  
+#menu img {
+    border-radius: 20px;
+}
