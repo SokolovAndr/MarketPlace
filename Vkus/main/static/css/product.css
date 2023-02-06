@@ -1,0 +1,8 @@
+.custom-navbar .nav li a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #575757;
+    padding-right: 22px;
+    padding-left: 22px;
+    text-transform: uppercase;
+}
