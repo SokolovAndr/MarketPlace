@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VkusProekt.Data.Interfaces;
+using VkusProekt.ViewModels;
 
 namespace VkusProekt.Controllers
 {
@@ -18,8 +19,11 @@ namespace VkusProekt.Controllers
 
         public ViewResult List() //для возврата html страницы
         {
-            var bludos = _allBludos.Bludos;
-            return View(bludos);
+            ViewBag.Title = "Меню"; //для передачи данных внутрь html шаблона
+            BludosListViewModel obj = new BludosListViewModel();
+            obj.allBludos = _allBludos.Bludos;
+            obj.currCategory = "Блюда";
+            return View(obj);
         }
     }
 }

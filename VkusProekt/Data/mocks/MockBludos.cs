@@ -32,7 +32,6 @@ namespace VkusProekt.Data.mocks
                         name = "Цезарь",
                         shortDesc = "Изысканный",
                         longDesc = "Популярное блюдо американской кухни",
-                        //img = "https://static.1000.menu/res/640/img/content-v2/eb/79/19516/salat-cezar-klassicheskii-s-kuricei_1611309331_16_max.jpg",
                         img = "",
                         price = 450,
                         isFavourite = true,
@@ -43,9 +42,18 @@ namespace VkusProekt.Data.mocks
                         name = "Крабовый",
                         shortDesc = "один из самых популярных салатов",
                         longDesc = "Классический крабовый салат с огурцом",
-                        //img = "https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/150116162013/150122200907/p_O.jpg.webp",
                         img = "",
                         price = 400,
+                        isFavourite = true,
+                        available = true,
+                        Category = _categoryBludos.AllCategories.Last()
+                    },
+                    new Bludo {
+                        name = "Мимоза",
+                        shortDesc = "Интересный салат",
+                        longDesc = "Классика",
+                        img = "",
+                        price = 350,
                         isFavourite = true,
                         available = true,
                         Category = _categoryBludos.AllCategories.Last()
