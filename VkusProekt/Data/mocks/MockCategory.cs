@@ -14,7 +14,7 @@ namespace VkusProekt.Data.mocks
                 return new List<Category>
                 {
                     new Category{categoryName = "Горячие блюда", desc = "Вкусные горячие блюда от нашего шеф-повара!"},
-                    new Category{categoryName = "Салаты", desc = "Свежайшие салаты!"}
+                    new Category{categoryName = "Дессерты", desc = "Вкуснешие дессерты!"}
                 };
             }
         }

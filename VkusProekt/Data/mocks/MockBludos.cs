@@ -18,42 +18,31 @@ namespace VkusProekt.Data.mocks
                 return new List<Bludo>
                 {
                     new Bludo {
-                        name = "Суп",
-                        shortDesc = "Домашний",
-                        longDesc = "Вкусный, сытный, мясной", 
-                        //img = "https://e3.edimdoma.ru/data/posts/0002/1924/21924-ed4_wide.jpg?1631188925",
-                        img = "",
+                        name = "Рагу",
+                        shortDesc = "Домашнее",
+                        longDesc = "Вкусное, сытное, мясное", 
+                        img = "/img/ragu.jpg",
                         price = 500,
                         isFavourite = true,
                         available = true,
                         Category = _categoryBludos.AllCategories.First()
                     },
                     new Bludo {
-                        name = "Цезарь",
+                        name = "Круассан",
                         shortDesc = "Изысканный",
-                        longDesc = "Популярное блюдо американской кухни",
-                        img = "",
-                        price = 450,
+                        longDesc = "Вкус французского завтра",
+                        img = "/img/cruasan.jpg",
+                        price = 100,
                         isFavourite = true,
                         available = true,
                         Category = _categoryBludos.AllCategories.Last()
                     },
                     new Bludo {
-                        name = "Крабовый",
-                        shortDesc = "один из самых популярных салатов",
-                        longDesc = "Классический крабовый салат с огурцом",
-                        img = "",
-                        price = 400,
-                        isFavourite = true,
-                        available = true,
-                        Category = _categoryBludos.AllCategories.Last()
-                    },
-                    new Bludo {
-                        name = "Мимоза",
-                        shortDesc = "Интересный салат",
-                        longDesc = "Классика",
-                        img = "",
-                        price = 350,
+                        name = "Эклер",
+                        shortDesc = "Нежный",
+                        longDesc = "Классический",
+                        img = "/img/ekler.jpg",
+                        price = 90,
                         isFavourite = true,
                         available = true,
                         Category = _categoryBludos.AllCategories.Last()

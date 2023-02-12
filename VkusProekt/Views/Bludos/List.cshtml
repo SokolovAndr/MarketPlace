@@ -1,11 +1,16 @@
 ﻿<h1>Все блюда</h1>
 <h3>@Model.currCategory</h3>    @*для передачи данных внутрь html шаблона*@
-@{
-    foreach (var bludo in Model.allBludos)  //Model - глобальный объект
-    {
-        <div>
-        <h2>Название: @bludo.name</h2>
+
+<div class="row mt-5 mb-2">
+    @{
+        foreach (var bludo in Model.allBludos) {  //Model - глобальный объект
+    <div class="col-lg-4">
+        <img class="img-thumbnail" src="@bludo.img" alt="@bludo.name" />
+        <h2>@bludo.name</h2>
+        <p>@bludo.shortDesc</p>
         <p>Цена: @bludo.price.ToString("c")</p> 
-        </div>
+        <p><a class="btn btn-warnig" href = "#">Подробнее</a></p> 
+    </div>
+        }
     }
-}
+</div>
