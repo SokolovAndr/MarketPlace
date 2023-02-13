@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+
 
 namespace VkusProekt.Data.Models
 {
@@ -30,9 +32,10 @@ namespace VkusProekt.Data.Models
             session.SetString("CartId", shopCartId);
 
             return new ShopCart(context) { ShopCartId = shopCartId };  //так не работает, пошли дальше (16.30)
-            //return new ShopCart((AppDBContent)context) { ShopCartId = shopCartId };
+            
+            //return new ShopCart((AppDBContent)context) { ShopCartId = shopCartId }; //так тоже не работает
         }
-        
+
         public void AddToCart(Bludo bludo)
         {
             appDBContent.ShopCartItem.Add(new ShopCartItem
