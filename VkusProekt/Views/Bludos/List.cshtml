@@ -3,14 +3,9 @@
 
 <div class="row mt-5 mb-2">
     @{
-        foreach (var bludo in Model.allBludos) {  //Model - глобальный объект
-    <div class="col-lg-4">
-        <img class="img-thumbnail" src="@bludo.img" alt="@bludo.name" />
-        <h2>@bludo.name</h2>
-        <p>@bludo.shortDesc</p>
-        <p>Цена: @bludo.price.ToString("c")</p> 
-        <p><a class="btn btn-warnig" href = "#">Подробнее</a></p> 
-    </div>
+        foreach (Bludo bludo in Model.allBludos)  //Model - глобальный объект
+        { 
+            @Html.Partial("AllBludos" ,bludo)
         }
     }
 </div>

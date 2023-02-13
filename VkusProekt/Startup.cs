@@ -8,6 +8,8 @@ using VkusProekt.Data.Interfaces;
 using VkusProekt.Data.mocks;
 using Microsoft.EntityFrameworkCore;
 using VkusProekt.Data.Repositry;
+using Microsoft.AspNetCore.Http;
+using VkusProekt.Data.Models;
 
 namespace VkusProekt
 {
@@ -30,7 +32,14 @@ namespace VkusProekt
             services.AddTransient<IBludosCategory, CategoryRepository>();
             //интерфейс IBludosCategory реализуется в классe MockBludos
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShopCart.GetCart(sp));
+
             services.AddMvc(option => option.EnableEndpointRouting = false);
+
+            services.AddMemoryCache();
+            services.AddSession();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -38,6 +47,7 @@ namespace VkusProekt
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
             
             using (var scope = app.ApplicationServices.CreateScope())

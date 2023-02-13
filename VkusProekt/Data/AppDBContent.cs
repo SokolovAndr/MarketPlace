@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using VkusProekt.Data.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace VkusProekt.Data
 {
@@ -9,5 +13,6 @@ namespace VkusProekt.Data
 
         public DbSet <Bludo> Bludo { get; set; }
         public DbSet<Category> Category { get; set; }
+        public DbSet <ShopCartItem> ShopCartItem { get; set; }
     }
 }
