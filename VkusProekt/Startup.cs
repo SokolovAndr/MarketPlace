@@ -30,7 +30,7 @@ namespace VkusProekt
             services.AddTransient<IBludosCategory, CategoryRepository>();
             //интерфейс IBludosCategory реализуется в классe MockBludos
 
-            services.AddMvc();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
