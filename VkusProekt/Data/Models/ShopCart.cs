@@ -26,7 +26,7 @@ namespace VkusProekt.Data.Models
         public static ShopCart GetCart(IServiceProvider services)
         {
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;  //создали сессию
-            var context = services.GetServices<AppDBContent>();
+            var context = services.GetService<AppDBContent>();
             string shopCartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();//если не существует cartId, то будем создавать новый идентификатор
             
             session.SetString("CartId", shopCartId);
