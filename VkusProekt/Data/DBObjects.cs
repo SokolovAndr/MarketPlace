@@ -47,7 +47,7 @@ namespace VkusProekt.Data
                         longDesc = "Классический",
                         img = "/img/ekler.jpg",
                         price = 90,
-                        isFavourite = true,
+                        isFavourite = false,
                         available = true,
                         Category = Categories["Дессерты"]
                     }

@@ -48,8 +48,13 @@ namespace VkusProekt
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
-            app.UseMvcWithDefaultRoute();
-            
+            app.UseMvc(routs =>
+            {
+                routs.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
+                routs.MapRoute(name: "categoryFilter", template: "Bludo/{action}/{category?}",
+                    defaults: new { Controller = "Bludo", action = "List" });
+            });
+
             using (var scope = app.ApplicationServices.CreateScope())
             {
                 AppDBContent content = scope.ServiceProvider.GetRequiredService<AppDBContent>();
