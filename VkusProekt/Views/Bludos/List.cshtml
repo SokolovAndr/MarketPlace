@@ -1,0 +1,10 @@
+﻿<h1>Все блюда</h1>
+<h3>@Model.currCategory</h3>    @*для передачи данных внутрь html шаблона*@
+
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Bludo bludo in Model.allBludos){  //Model - глобальный объект
+            @Html.Partial("AllBludos", bludo)
+        }
+    }
+</div>
