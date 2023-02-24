@@ -20,7 +20,7 @@ namespace VkusProekt.Data
                 content.AddRange(
                     new Bludo
                     {
-                        name = "Рагу",
+                        name = "Рагу домашнее",
                         shortDesc = "Домашнее",
                         longDesc = "Вкусное, сытное, мясное",
                         img = "/img/ragu.jpg",
