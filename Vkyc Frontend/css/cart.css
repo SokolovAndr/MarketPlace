@@ -7,6 +7,9 @@
     text-transform: uppercase;
 }
 
+#cart {
+    background-image: url("img\other\cart-background.png");
+}
 
 @media (min-width: 1025px) {
     .h-custom {
@@ -30,6 +33,7 @@
     top: 13px;
 }
 
+
 .bg-grey {
     background-color: #eae8e8;
 }
@@ -39,6 +43,9 @@
         border-top-right-radius: 16px;
         border-bottom-right-radius: 16px;
     }
+    #cart {
+        margin: 50px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -46,4 +53,25 @@
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
     }
+    .cart-content  img {
+        width: 100px;    
+    }
+
+    .item-quantity
+    {
+        size: 10px;
+    }
+
+    #cart {
+        margin: 25px;
+
+    }
 }
+
+@media (min-width: 1201px) {
+    #cart {
+        margin: 50px;
+        margin-top: 25px;
+    }
+}
+

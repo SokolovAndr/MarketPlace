@@ -56,6 +56,19 @@
     display: block;
     margin-top: 10px;
 }
+
+.fa-cart-plus {
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.menu-info .add-to-cart
+{
+    position: relative;
+}
   
 .menu-thumb .menu-info h3, .menu-thumb .menu-info p, .menu-thumb .menu-info span {
     /* transform: translateY(100%); */
