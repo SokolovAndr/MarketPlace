@@ -179,9 +179,10 @@ section {
 	font-weight: bold;
 }
 .navbar-brand img {
-	width: 45px;
+	width: 55px;
 	top: -15px;
 	position: relative;
+	border-radius: 10%;
 }
 .custom-navbar .navbar-brand span {
 	color: #ce3232;
@@ -199,6 +200,9 @@ section {
 .custom-navbar .navbar-nav.navbar-right .section-btn {
 	display: inline-block;
 	margin: 0.2em 0 0 1em;
+}
+.custom-navbar .navbar-nav.navbar-right li a {
+    font-size: 17px;
 }
 .custom-navbar .navbar-nav.navbar-right .section-btn:hover {
 	background: #292929;
@@ -245,7 +249,7 @@ section {
 }
 @media(min-width:768px) {
 	.custom-navbar {
-		border-bottom: 0;
+		border-bottom: 0; 
 		background: 0 0;
 	}
 	.custom-navbar.top-nav-collapse {
@@ -287,6 +291,9 @@ section {
 @media (min-width: 768px) {
 	.slider .col-md-8 {
 		padding-left: 0;
+	}
+	.menu-info {
+		font-size: 10px;
 	}
 }
 .slider .owl-dots {
@@ -613,6 +620,7 @@ footer address p {
 		margin-bottom: 50px;
 	}
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.custom-navbar .nav li a {
 		padding-right: 10px;
