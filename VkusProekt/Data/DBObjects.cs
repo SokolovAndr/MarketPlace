@@ -21,7 +21,7 @@ namespace VkusProekt.Data
                     new Bludo
                     {
                         name = "Рагу домашнее",
-                        shortDesc = "Домашнее",
+                        shortDesc = "Щедрая порция ароматного рагу с картофелем и сочной курицей",
                         longDesc = "Вкусное, сытное, мясное",
                         img = "/img/ragu.jpg",
                         price = 500,
@@ -32,7 +32,7 @@ namespace VkusProekt.Data
                     new Bludo
                     {
                         name = "Круассан шоколадный",
-                        shortDesc = "Изысканный",
+                        shortDesc = "Хрустящий слоёный десерт с большой порцией шоколадной начинки",
                         longDesc = "Вкус французского завтра",
                         img = "/img/cruasan.jpg",
                         price = 100,
@@ -43,7 +43,7 @@ namespace VkusProekt.Data
                     new Bludo
                     {
                         name = "Эклер",
-                        shortDesc = "Нежный",
+                        shortDesc = "Воздушные эклеры с нежной сливочной начинкой в яркой глазури",
                         longDesc = "Классический",
                         img = "/img/ekler.jpg",
                         price = 90,
@@ -54,7 +54,7 @@ namespace VkusProekt.Data
                     new Bludo
                     {
                         name = "Кулич",
-                        shortDesc = "Пасхальный",
+                        shortDesc = "Традиционный пасхальный кулич в густой глазури с аккуратным золотым декором",
                         longDesc = "Классический пасхальный",
                         img = "/img/kulich.jpg",
                         price = 50,
@@ -65,7 +65,7 @@ namespace VkusProekt.Data
                     new Bludo
                     {
                         name = "Торт шоколадный",
-                        shortDesc = "Шоколадный",
+                        shortDesc = "Бисквитный торт насыщенным шоколадным вкусом, орехами и свежей голубикой",
                         longDesc = "Изысканный вкус",
                         img = "/img/chokotort.jpg",
                         price = 700,
@@ -75,8 +75,8 @@ namespace VkusProekt.Data
                     },
                     new Bludo
                     {
-                        name = "Торт черничный",
-                        shortDesc = "Черничный",
+                        name = "Торт из голубики",
+                        shortDesc = "Пышный десерт с творожным кремом и свежей голубикой",
                         longDesc = "Изысканный вкус",
                         img = "/img/chernika.jpg",
                         price = 750,
@@ -86,8 +86,8 @@ namespace VkusProekt.Data
                     },
                     new Bludo
                     {
-                        name = "Картошка запеченая",
-                        shortDesc = "Запеченая",
+                        name = "Печеный картофель",
+                        shortDesc = "Большая порция печеной картошки с душистыми специями на гарнир",
                         longDesc = "Только из печи",
                         img = "/img/kartoshka.jpg",
                         price = 350,
@@ -97,8 +97,8 @@ namespace VkusProekt.Data
                     },
                     new Bludo
                     {
-                        name = "Котлета",
-                        shortDesc = "Мясная",
+                        name = "Зразы с грибами",
+                        shortDesc = "Сочные котлеты из рубленого фарша с ароматным грибами",
                         longDesc = "Сытная мясная котлета",
                         img = "/img/kotleta.jpg",
                         price = 250,
@@ -108,8 +108,8 @@ namespace VkusProekt.Data
                     },
                     new Bludo
                     {
-                        name = "Курица запеченая",
-                        shortDesc = "Курица запеченая",
+                        name = "Филе куры",
+                        shortDesc = "Сочное куриное филе с золотистой хрустящей корочкой",
                         longDesc = "Большой сытный кусок",
                         img = "/img/kurica.jpg",
                         price = 200,
@@ -120,7 +120,7 @@ namespace VkusProekt.Data
                     new Bludo
                     {
                         name = "Сосиска в тесте",
-                        shortDesc = "Сосиска в тесте",
+                        shortDesc = "Сытная выпечка из слоёного теста с домашней сосиской",
                         longDesc = "Сочная сосиска в тесте",
                         img = "/img/sosiska.jpg",
                         price = 70,
@@ -131,7 +131,7 @@ namespace VkusProekt.Data
                     new Bludo
                     {
                         name = "Луковые колечки",
-                        shortDesc = "Луковые колечки",
+                        shortDesc = "Хрустящие снеки, обжаренные в масле",
                         longDesc = "Вкусные дуковые колечки",
                         img = "/img/kolechki.jpg",
                         price = 120,
@@ -142,7 +142,7 @@ namespace VkusProekt.Data
                     new Bludo
                     {
                         name = "Торт ореховый",
-                        shortDesc = "Ореховый",
+                        shortDesc = "Богатый кремовый торт на сочных коржах, щедро украшенный орехами и карамельными иголочками",
                         longDesc = "Изысканный вкус",
                         img = "/img/orehtort.jpg",
                         price = 690,
@@ -152,8 +152,8 @@ namespace VkusProekt.Data
                     },
                     new Bludo
                     {
-                        name = "Зефир 9 шт.",
-                        shortDesc = "Набор зефира",
+                        name = "Макаронс",
+                        shortDesc = "Порция нежных белковых пирожных с прослойкой ароматной начинки",
                         longDesc = "Неповторимый вкус",
                         img = "/img/zefir.jpg",
                         price = 250,
@@ -164,7 +164,7 @@ namespace VkusProekt.Data
                     new Bludo
                     {
                         name = "Круассан воздушный",
-                        shortDesc = "Изысканный",
+                        shortDesc = "Хрустящий слоёный десерт с большой порцией сливочной начинки",
                         longDesc = "Вкус французского завтра",
                         img = "/img/cruasan2.jpg",
                         price = 80,
@@ -174,8 +174,8 @@ namespace VkusProekt.Data
                     },
                     new Bludo
                     {
-                        name = "Дессерт авторский",
-                        shortDesc = "Авторский",
+                        name = "Пирожное мандарин",
+                        shortDesc = "Сочный десерт с ярким цитрусовым вкусом в форме любимого фрукта",
                         longDesc = "Загадка",
                         img = "/img/avtor.jpg",
                         price = 105,
