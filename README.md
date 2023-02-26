@@ -6,7 +6,7 @@
 <hr>2. Иван Овсянников - frontend (Zeltharion)
 <hr>3. Денис Полуэктов - backend (DenisKT85)
 <hr>4. Дмитрий Новжилов - backend (Jonhef)
-
+<hr>
 **Дизайнеры:**
 <hr>5. Мария Фрицлер
 <hr>6. Полина Жукова
