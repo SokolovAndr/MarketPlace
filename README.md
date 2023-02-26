@@ -1,1 +1,1 @@
-# Django + Fronted
+# Django + Frontend
