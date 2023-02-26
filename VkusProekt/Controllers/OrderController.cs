@@ -37,7 +37,8 @@ namespace VkusProekt.Controllers
 
         public IActionResult Complete()
         {            
-            ViewBag.Message = "Заказ успешно обработан!";
+            ViewBag.Message = "Спасибо за заказ!" +
+                "\nВ ближайшее время с вами свяжется оператор для подтверждения заказа.";
             return View();
         }
     }
