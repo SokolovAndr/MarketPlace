@@ -10,3 +10,12 @@
 <hr>6. Полина Жукова - Дизайнер
 <hr>7. Вера Расхожева - Дизайнер
 <hr>
+
+
+# ВАЖНО
+# Для запуска проекта в диспетчере пакетов прописать
+EntityFrameworkCore\Add-Migration Any -Context
+а затем 
+EntityFrameworkCore\Update-Database
+
+После этого все заработает
