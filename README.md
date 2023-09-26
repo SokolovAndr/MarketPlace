@@ -18,3 +18,5 @@ EntityFrameworkCore\Add-Migration Any -Context
 EntityFrameworkCore\Update-Database
 
 После этого все заработает
+<br/>
+![Image alt](https://github.com/SokolovAndr/VkusProekt/blob/ASP.NET-Version/vkusProekt.gif)
